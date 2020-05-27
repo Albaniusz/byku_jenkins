@@ -43,6 +43,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -53,12 +54,13 @@
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
-                    <appName>jenkins-spring-example</appName>
+                    <appName>jenkins</appName>
                     <processTypes>
-                        <web>java -jar -Dserver.port=$PORT target/${project.build.finalName}.jar</web>
+                        <web>java -jar -Dserver.port=$PORT ${project.build.directory}/${project.build.finalName}.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
