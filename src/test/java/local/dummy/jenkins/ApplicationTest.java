@@ -23,6 +23,6 @@ class ApplicationTest {
 		mockMvc.perform(get("/"))
 				.andDo(print())
 				.andExpect(status().isOk())
-				.andExpect(content().string("hello world!"));
+				.andExpect(content().string("hello world!123"));
 	}
 }
