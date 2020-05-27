@@ -54,7 +54,7 @@
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
-                    <appName>jenkins</appName>
+                    <appName>local-dummy-jenkins</appName>
                     <processTypes>
                         <web>java -jar -Dserver.port=$PORT ${project.build.directory}/${project.build.finalName}.jar</web>
                     </processTypes>
