@@ -56,7 +56,7 @@
                 <configuration>
                     <appName>local-dummy-jenkins</appName>
                     <processTypes>
-                        <web>java -jar -Dserver.port=$PORT ${project.build.directory}/${project.build.finalName}.jar</web>
+                        <web>java -jar -Dserver.port=$PORT target/${project.build.finalName}.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
